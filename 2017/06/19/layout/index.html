@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/6 | 我的博客</title>
+  <title>我的前端日记 | 我的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="我的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2017/06/index.html">
+  <meta name="description" content="浏览器兼容性问题归总1 、ie8支持输入框内有提示文本123456789101112131415161718$(document).ready(function() &amp;#123;    if (!$.support.leadingWhitespace) &amp;#123;        $(&amp;apos;input[placeholder]&amp;apos;).each(function() &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的前端日记">
+<meta property="og:url" content="http://yoursite.com/2017/06/19/layout/index.html">
 <meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="浏览器兼容性问题归总1 、ie8支持输入框内有提示文本123456789101112131415161718$(document).ready(function() &amp;#123;    if (!$.support.leadingWhitespace) &amp;#123;        $(&amp;apos;input[placeholder]&amp;apos;).each(function() &amp;#123;">
+<meta property="og:updated_time" content="2017-06-19T14:06:58.006Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的博客">
+<meta name="twitter:title" content="我的前端日记">
+<meta name="twitter:description" content="浏览器兼容性问题归总1 、ie8支持输入框内有提示文本123456789101112131415161718$(document).ready(function() &amp;#123;    if (!$.support.leadingWhitespace) &amp;#123;        $(&amp;apos;input[placeholder]&amp;apos;).each(function() &amp;#123;">
   
     <link rel="alternative" href="/atom.xml" title="我的博客" type="application/atom+xml">
   
@@ -149,76 +153,143 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-layout" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      我的前端日记
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/19/layout/" class="archive-article-date">
+
+        
+        <a href="/2017/06/19/layout/" class="archive-article-date">
   	<time datetime="2017-06-19T13:33:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-19</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/19/layout/">我的前端日记</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="浏览器兼容性问题归总"><a href="#浏览器兼容性问题归总" class="headerlink" title="浏览器兼容性问题归总"></a>浏览器兼容性问题归总</h1><h3 id="1-、ie8支持输入框内有提示文本"><a href="#1-、ie8支持输入框内有提示文本" class="headerlink" title="1 、ie8支持输入框内有提示文本"></a>1 、ie8支持输入框内有提示文本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function() &#123;</div><div class="line">    if (!$.support.leadingWhitespace) &#123;</div><div class="line">        $(&apos;input[placeholder]&apos;).each(function() &#123;</div><div class="line">            var input = $(this);</div><div class="line">            $(input).val(input.attr(&apos;placeholder&apos;));</div><div class="line">            $(input).focus(function() &#123;</div><div class="line">                if (input.val() == input.attr(&apos;placeholder&apos;)) &#123;</div><div class="line">                    input.val(&apos;&apos;);</div><div class="line">                &#125;</div><div class="line">            &#125;);</div><div class="line">            $(input).blur(function() &#123;</div><div class="line">                if (input.val() == &apos;&apos; || input.val() == input.attr(&apos;placeholder&apos;)) &#123;</div><div class="line">                    input.val(input.attr(&apos;placeholder&apos;));</div><div class="line">                &#125;</div><div class="line">            &#125;);</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="2、ie8浏览器常见问题"><a href="#2、ie8浏览器常见问题" class="headerlink" title="2、ie8浏览器常见问题"></a>2、ie8浏览器常见问题</h3><ol>
+<li>代码中出现 ==console.log()== 会报错, 以及最后一行语句中尽量避免出现 ==,==</li>
+<li>ie8 以下版本浏览器不支持 ==background-size== 属性，可以设置==img==标签，宽高均为100%，且固定定位到父元素内部；</li>
+</ol>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/06/19/layout/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/17/hello-world/" class="archive-article-date">
-  	<time datetime="2017-06-17T11:39:00.619Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-17</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/17/hello-world/">Hello World</a>
-    </h1>
+  
+    <a href="/2017/06/17/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -241,8 +312,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

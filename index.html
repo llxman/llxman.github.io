@@ -151,6 +151,58 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-layout" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/19/layout/">我的前端日记</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/19/layout/" class="archive-article-date">
+  	<time datetime="2017-06-19T13:33:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="浏览器兼容性问题归总"><a href="#浏览器兼容性问题归总" class="headerlink" title="浏览器兼容性问题归总"></a>浏览器兼容性问题归总</h1><h3 id="1-、ie8支持输入框内有提示文本"><a href="#1-、ie8支持输入框内有提示文本" class="headerlink" title="1 、ie8支持输入框内有提示文本"></a>1 、ie8支持输入框内有提示文本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function() &#123;</div><div class="line">    if (!$.support.leadingWhitespace) &#123;</div><div class="line">        $(&apos;input[placeholder]&apos;).each(function() &#123;</div><div class="line">            var input = $(this);</div><div class="line">            $(input).val(input.attr(&apos;placeholder&apos;));</div><div class="line">            $(input).focus(function() &#123;</div><div class="line">                if (input.val() == input.attr(&apos;placeholder&apos;)) &#123;</div><div class="line">                    input.val(&apos;&apos;);</div><div class="line">                &#125;</div><div class="line">            &#125;);</div><div class="line">            $(input).blur(function() &#123;</div><div class="line">                if (input.val() == &apos;&apos; || input.val() == input.attr(&apos;placeholder&apos;)) &#123;</div><div class="line">                    input.val(input.attr(&apos;placeholder&apos;));</div><div class="line">                &#125;</div><div class="line">            &#125;);</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="2、ie8浏览器常见问题"><a href="#2、ie8浏览器常见问题" class="headerlink" title="2、ie8浏览器常见问题"></a>2、ie8浏览器常见问题</h3><ol>
+<li>代码中出现 ==console.log()== 会报错, 以及最后一行语句中尽量避免出现 ==,==</li>
+<li>ie8 以下版本浏览器不支持 ==background-size== 属性，可以设置==img==标签，宽高均为100%，且固定定位到父元素内部；</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/19/layout/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
